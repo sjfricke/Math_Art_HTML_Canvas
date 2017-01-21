@@ -1,3 +1,5 @@
+
+//window.addEventListener('mousedown', onWindowMouseDown, false);
 function onWindowMouseDown(event) {
     
     mouseX = event.clientX;
