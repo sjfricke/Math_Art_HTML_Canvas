@@ -9,3 +9,13 @@ The [Lorenze System](https://en.wikipedia.org/wiki/Lorenz_system) is a system of
 ![image of Lorenze Print](https://github.com/sjfricke/Math_Art_HTML_Canvas/blob/master/Lorenz_Demo_Print.png)
 
 [Click here](http://spencerfricke.com/art/Math_Art_HTML_Canvas/Lorenz/index.html) to see a live demo
+
+## Gingerbreadman Map
+
+```
+How screen is divided
+_____
+|  /|
+| / |
+|/__|
+```
