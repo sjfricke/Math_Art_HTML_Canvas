@@ -1,18 +1,31 @@
+//drawing globals
+var drawing = false;
+var drawing_count = 0;
+var drawing_limit = 0;
 
 function onWindowMouseDown(event) {
     
-    mouseX = event.clientX;
-    mouseY = event.clientY;
+    currentCoord.x1 = event.clientX;
+    currentCoord.y1 = event.clientY;
     
-    if (inTopHalf(mouseX, mouseY)) {
-        drawDot(mouseX, mouseY);
+    // checks if drawing is in place and returns if it is
+    if (drawing) { 
+        return;
     } else {
-        
-        var flipped = reflectCoord(mouseX, mouseY);
-        
-        console.log("mouse x: " + mouseX + " y: " + mouseY );
-        console.log("flip x: " + flipped.x + " y: " + flipped.y );
-        
-        drawDot(flipped.x, flipped.y);
+        color_selector() // set color
+        // set drawing globals
+        drawing_count = 0;
+        drawing_limit = Math.random() * 100;
+        drawing = true;
     }
+    // gets flipped side and then sends to draw
+    var flipped = reflectCoord(currentCoord.x1, currentCoord.y1);
+    currentCoord.x2 = flipped.x;
+    currentCoord.y2 = flipped.y;
+    
+    render();
+
+    //console.log("mouse x: " + mouseX + " y: " + mouseY );
+    //console.log("flip x: " + flipped.x + " y: " + flipped.y );
+    
 }

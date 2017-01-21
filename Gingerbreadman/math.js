@@ -9,6 +9,7 @@ var normal_slope = -1 / slope;
 
 
 // used to see which half of triangle its in
+// this allows all calulations to be done on one side
 function inTopHalf(x, y){
     return (SCREEN_WIDTH * y) +(SCREEN_HEIGHT * x) - (SCREEN_WIDTH * SCREEN_HEIGHT) < 0;
 }
