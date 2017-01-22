@@ -25,3 +25,11 @@ The [Gingerbreadman Map](https://en.wikipedia.org/wiki/Gingerbreadman_map) is a 
 ![image of Lorenze Print](https://github.com/sjfricke/Math_Art_HTML_Canvas/blob/master/Gingerbreadman_Demo_Print.png)
 
 [Click here](http://spencerfricke.com/art/Math_Art_HTML_Canvas/Gingerbreadman/index.html) to see a live demo
+
+## DotMaker
+
+There is a part two to this project, but when asked to pushed my canvas to 10,000 balls I had to stop so others could crash their browser as well. The constants are set in top of `main.js`
+
+![image of Lorenze Print](https://github.com/sjfricke/Math_Art_HTML_Canvas/blob/master/DotMaker_Demo_Print.png)
+
+[Click here](http://spencerfricke.com/art/Math_Art_HTML_Canvas/DotMaker/index.html) to see a live demo, (takes a while to load)
