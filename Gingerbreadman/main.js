@@ -26,7 +26,7 @@ var lastCoord = {
 // used to debug if on screen with a dot
 function drawDot(x,y) {
     context.beginPath();
-    context.arc(x,y,5,0,2*Math.PI);    
+    context.arc(x,y,Math.random() * 20,0,2*Math.PI);    
     context.fillStyle = current_color;
     context.fill();
     context.stroke();
@@ -58,7 +58,16 @@ function color_selector() {
     var green = Math.floor(Math.random() * 255);
     var blue = Math.floor(Math.random() * 255);
     
-    current_color = "rgb(" + red + "," + green + "," + blue + ")";
+    current_color = "rgb(" + Math.floor(red * 1.3) + "," + Math.floor(green * 1.3) + "," + Math.floor(blue * 1.3) + ")";
+    
+    var my_gradient=context.createLinearGradient(HALF_W * .1, HALF_H * .1, HALF_W * 1.8, HALF_H * 1.8);
+    my_gradient.addColorStop(0,"white");
+//    my_gradient.addColorStop(0.5,"rgb(" + red + "," + green + "," + blue + ")");
+//  
+    my_gradient.addColorStop(.5,current_color);
+    my_gradient.addColorStop(1,"white");
+    
+    current_color = my_gradient;
 }
 
 // frame calculations
@@ -74,8 +83,10 @@ function render() {
         drawDot(currentCoord.x1, currentCoord.y1);
         drawDot(currentCoord.x2, currentCoord.y2);
         console.log("X: " + currentCoord.x1 + "    y: " + currentCoord.y1 );
-        currentCoord.x1 = (1 - (.01 * currentCoord.y1) + Math.abs(currentCoord.x1));
-        currentCoord.y1 = (currentCoord.y1 + Math.random() * 5);
+//        currentCoord.x1 = (1 - (.01 * currentCoord.y1 ) + Math.abs(currentCoord.x1));
+//        currentCoord.y1 = (currentCoord.y1 + Math.random() * 5 * Math.random() < 0.5 ? -1 : 1);
+          currentCoord.x1 = (-1 + currentCoord.x1 + Math.random() * 25 * (Math.random() < 0.5 ? -1 : 1));
+          currentCoord.y1 = (-1 + currentCoord.y1 + Math.random() * 25 * (Math.random() < 0.5 ? -1 : 1));
         var flipped = reflectCoord(currentCoord.x1, currentCoord.y1);
         currentCoord.x2 = flipped.x;
         currentCoord.y2 = flipped.y;         

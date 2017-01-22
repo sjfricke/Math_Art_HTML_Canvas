@@ -19,3 +19,9 @@ _____
 | / |
 |/__|
 ```
+
+The [Gingerbreadman Map](https://en.wikipedia.org/wiki/Gingerbreadman_map) is a "chaotic two-dimensional symmetric map". It is given by the piecewise linear transformation.
+
+![image of Lorenze Print](https://github.com/sjfricke/Math_Art_HTML_Canvas/blob/master/Gingerbreadman_Demo_Print.png)
+
+[Click here](http://spencerfricke.com/art/Math_Art_HTML_Canvas/Gingerbreadman/index.html) to see a live demo
