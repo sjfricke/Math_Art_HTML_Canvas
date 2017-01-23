@@ -20,7 +20,7 @@ _____
 |/__|
 ```
 
-The [Gingerbreadman Map](https://en.wikipedia.org/wiki/Gingerbreadman_map) is a "chaotic two-dimensional symmetric map". It is given by the piecewise linear transformation.
+The [Gingerbreadman Map](https://en.wikipedia.org/wiki/Gingerbreadman_map) is a "chaotic two-dimensional symmetric map". It is given by the piecewise linear transformation where the same characteristics are seen reflected on the other side of the dividing line.
 
 ![image of Lorenze Print](https://github.com/sjfricke/Math_Art_HTML_Canvas/blob/master/Gingerbreadman_Demo_Print.png)
 
@@ -28,7 +28,7 @@ The [Gingerbreadman Map](https://en.wikipedia.org/wiki/Gingerbreadman_map) is a 
 
 ## DotMaker
 
-There is a part two to this project, but when asked to pushed my canvas to 10,000 balls I had to stop so others could crash their browser as well. The constants are set in top of `main.js`
+There is a part two to this project, but when asked to pushed my canvas to 10,000 balls I had to stop so others could crash their browser as well. The constants are set in top of `main.js`. Note the warnings given next to them.
 
 ![image of Lorenze Print](https://github.com/sjfricke/Math_Art_HTML_Canvas/blob/master/DotMaker_Demo_Print.png)
 
