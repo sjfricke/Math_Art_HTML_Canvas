@@ -24,14 +24,18 @@
 			}
 		</style>
 	</head>
-	<body>	
-		<div id="container"></div>
+	<body>
+	  <div id="container"></div>
+	  <div id="preMessage" style="position: absolute; z-index: 999; top: 20px; left: 45%"> Click anywhere to draw </div>
 	</body>
     
-    <script src="animation.js"></script> <!--Needs to be first-->
-    
-    
+        <script src="animation.js"></script> <!--Needs to be first-->
+        
 	<script src="windowEvent.js"></script>
-    <script src="main.js"></script>
+        <script src="main.js"></script>
 	<script src="math.js"></script>
+
+	<script>
+	  setTimeout(function(){document.getElementById("preMessage").style.visibility = "hidden";}, 3000);
+	</script>
 </html>
