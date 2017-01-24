@@ -8,7 +8,7 @@ The [Lorenze System](https://en.wikipedia.org/wiki/Lorenz_system) is a system of
 
 ![image of Lorenze Print](https://github.com/sjfricke/Math_Art_HTML_Canvas/blob/master/Lorenz_Demo_Print.png)
 
-[Click here](http://spencerfricke.com/art/Math_Art_HTML_Canvas/Lorenz/index.html) to see a live demo
+[Click here](http://spencerfricke.com/art/Math_Art_HTML_Canvas/Lorenz/index.html) to see a live demo (Note: the drawing is never the same twice)
 
 ## Gingerbreadman Map
 
@@ -32,4 +32,6 @@ There is a part two to this project, but when asked to pushed my canvas to 10,00
 
 ![image of Lorenze Print](https://github.com/sjfricke/Math_Art_HTML_Canvas/blob/master/DotMaker_Demo_Print.png)
 
-[Click here](http://spencerfricke.com/art/Math_Art_HTML_Canvas/DotMaker/index.html) to see a live demo, (takes a while to load)
+[Click here](http://spencerfricke.com/art/Math_Art_HTML_Canvas/DotMaker/index.html) to see a live demo, (refresh demo to see new dot layout)
+
+
