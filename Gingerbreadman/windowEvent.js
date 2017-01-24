@@ -5,8 +5,8 @@ var drawing_limit = 0;
 
 function onWindowMouseDown(event) {
     
-    currentCoord.x1 = event.clientX;
-    currentCoord.y1 = event.clientY;
+    lastCoord.x1 = event.clientX;
+    lastCoord.y1 = event.clientY;
     
     // checks if drawing is in place and returns if it is
     if (drawing) { 
@@ -19,9 +19,9 @@ function onWindowMouseDown(event) {
         drawing = true;
     }
     // gets flipped side and then sends to draw
-    var flipped = reflectCoord(currentCoord.x1, currentCoord.y1);
-    currentCoord.x2 = flipped.x;
-    currentCoord.y2 = flipped.y;
+    var flipped = reflectCoord(lastCoord.x1, lastCoord.y1);
+    lastCoord.x2 = flipped.x;
+    lastCoord.y2 = flipped.y;
     
     render();
 

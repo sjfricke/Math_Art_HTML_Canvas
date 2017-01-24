@@ -24,9 +24,9 @@ var lastCoord = {
 }
 
 // used to debug if on screen with a dot
-function drawDot(x,y) {
+function drawDot(x,y, radius) {
     context.beginPath();
-    context.arc(x,y,Math.random() * 20,0,2*Math.PI);    
+    context.arc(x,y,radius,0,2*Math.PI);    
     context.fillStyle = current_color;
     context.fill();
     context.stroke();
@@ -60,7 +60,7 @@ function color_selector() {
     
     current_color = "rgb(" + Math.floor(red * 1.3) + "," + Math.floor(green * 1.3) + "," + Math.floor(blue * 1.3) + ")";
     
-    var my_gradient=context.createLinearGradient(HALF_W * .1, HALF_H * .1, HALF_W * 1.8, HALF_H * 1.8);
+    var my_gradient=context.createLinearGradient(0,0, SCREEN_WIDTH, SCREEN_HEIGHT);
     my_gradient.addColorStop(0,"white");
 //    my_gradient.addColorStop(0.5,"rgb(" + red + "," + green + "," + blue + ")");
 //  
@@ -77,19 +77,16 @@ function render() {
         drawing = false; //lets mouseDown to happen again
         return;
     } else {        
-        drawing_count++;
-           
+        drawing_count++;           
         // draws dots from this frame
-        drawDot(currentCoord.x1, currentCoord.y1);
-        drawDot(currentCoord.x2, currentCoord.y2);
-        console.log("X: " + currentCoord.x1 + "    y: " + currentCoord.y1 );
-//        currentCoord.x1 = (1 - (.01 * currentCoord.y1 ) + Math.abs(currentCoord.x1));
-//        currentCoord.y1 = (currentCoord.y1 + Math.random() * 5 * Math.random() < 0.5 ? -1 : 1);
-          currentCoord.x1 = (-1 + currentCoord.x1 + Math.random() * 25 * (Math.random() < 0.5 ? -1 : 1));
-          currentCoord.y1 = (-1 + currentCoord.y1 + Math.random() * 25 * (Math.random() < 0.5 ? -1 : 1));
+        currentCoord.x1 = (-1 + lastCoord.x1 + Math.random() * 25 * (Math.random() < 0.5 ? -1 : 1));
+        currentCoord.y1 = (-1 + lastCoord.y1 + Math.random() * 25 * (Math.random() < 0.5 ? -1 : 1));
         var flipped = reflectCoord(currentCoord.x1, currentCoord.y1);
         currentCoord.x2 = flipped.x;
-        currentCoord.y2 = flipped.y;         
+        currentCoord.y2 = flipped.y;
+	var radius = Math.random() * 20;
+        drawDot(currentCoord.x1, currentCoord.y1, radius);
+        drawDot(currentCoord.x2, currentCoord.y2, radius);
         
         //sets n-1
         lastCoord.x1 = currentCoord.x1;
