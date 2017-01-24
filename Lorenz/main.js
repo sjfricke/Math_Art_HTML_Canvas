@@ -20,9 +20,9 @@ var lorenz_x = 0.1;
 var lorenz_y = 0;
 var lorenz_z = 0; 
     // starting parameters
-var sigma = 10.0;
-var rho = 28.0;
-var beta = 2.7;
+var sigma = 10.0 + (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 2);
+var rho = 28.0 + (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 2);
+var beta = 2.7 + (Math.random() < 0.5 ? -1 : 1) * (Math.random() * .3);
 var t = 0.01; 
     // used to zoom in  drawing
 var zoom = 11;
